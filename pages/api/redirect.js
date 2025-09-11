@@ -66,11 +66,11 @@ export default async function handler(req, res) {
     const allowed = ["http:", "https:", "wa:"];
     if (!allowed.includes(parsed.protocol)) {
       // إذا البروتوكول غير مسموح نعيد إلى default
-      return res.redirect(302, process.env.DEFAULT_RETURN_URL || "https://wa.me/966542069160");
+      return res.redirect(302, process.env.DEFAULT_RETURN_URL || "https://ariaresorts.bookmystay.io/");
     }
   } catch (e) {
     // invalid URL => fallback
-    return res.redirect(302, process.env.DEFAULT_RETURN_URL || "https://wa.me/966542069160");
+    return res.redirect(302, process.env.DEFAULT_RETURN_URL || "https://ariaresorts.bookmystay.io/");
   }
 
   // Perform redirect (302)
